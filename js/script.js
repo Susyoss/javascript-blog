@@ -22,7 +22,7 @@ for(let link of links){
   
 console.log(link);
 }
-'use strict';
+
 
 function titleClickHandler(){
   console.log('Link was clicked!');
