@@ -7,6 +7,19 @@
     tagCloudLink: Handlebars.compile(document.querySelector('#template-tag-cloud-link').innerHTML),
     authorCloudLink: Handlebars.compile(document.querySelector('#template-author-cloud-link').innerHTML),
   }
+  const optArticleSelector = '.post',
+    optTitleSelector = '.post-title',
+    optTitleListSelector = '.titles',
+    optArticleTagsSelector = '.post-tags .list',
+    optArticleAuthorSelector = '.post-author',
+    optTagLinkSelector = '.post-tags .list a, .tags.list a',
+    optTagsListSelector = '.tags.list a ',
+    optCloudClassCount = '5',
+    optCloudClassPrefix = 'tag-size-',
+    optAuthorLinksSelector = '.post-author a, .authors.list a',
+    optAuthorsListSelector = '.authors.list',
+    optAuthorClassCount = '5',
+    optAuthorClassPrefix = 'tag-size-';
   const titleClickHandler = function (event) {
     event.preventDefault();
     const clickedElement = this;
@@ -35,29 +48,6 @@
     targetArticle.classList.add('active');
     //console.log('targetArticle', targetArticle);
   }
-  const optArticleSelector = '.post',
-    optTitleSelector = '.post-title',
-    optTitleListSelector = '.titles',
-    optArticleTagsSelector = '.post-tags .list',
-    optArticleAuthorSelector = '.post-author',
-    optTagLinkSelector = '.post-tags .list a, .tags.list a',
-    optTagsListSelector = '.tags.list a ',
-    optCloudClassCount = '5',
-    optCloudClassPrefix = 'tag-size-',
-
-    
-          
-            
-    
-
-          
-    
-    
-  
-    optAuthorLinksSelector = '.post-author a, .authors.list a',
-    optAuthorsListSelector = '.authors.list',
-    optAuthorClassCount = '5',
-    optAuthorClassPrefix = 'tag-size-';
   function generateTitleLinks(customSelector = '') {
     //console.log(customSelector);
     /* [done??] remove contents of titleList */
